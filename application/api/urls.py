@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 from django.urls import path
-from api.game import views as game_views
+from application.api.game import views as game_views
 
 urlpatterns = [
     path('', game_views.APIOverview.as_view(), name='api-overview'),
