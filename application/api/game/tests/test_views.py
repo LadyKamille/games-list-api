@@ -2,7 +2,7 @@ import json
 from application.api.game.tests.test_setup import TestSetup
 
 
-class TestViews(TestSetup):
+class GameTestViews(TestSetup):
     def test_get_game_list(self):
         response = self.client.get(self.game_list_url)
         self.assertEqual(response.status_code, 200)
