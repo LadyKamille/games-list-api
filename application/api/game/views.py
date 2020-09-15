@@ -44,7 +44,7 @@ class GameList(APIView):
 
 class GameDetail(APIView):
     """
-    Retrieve, update or delete a snippet instance.
+    Retrieve, update or delete a game instance.
     """
     @staticmethod
     def get_object(pk):

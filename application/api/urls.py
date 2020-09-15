@@ -19,6 +19,6 @@ from application.api.game import views as game_views
 
 urlpatterns = [
     path('', game_views.APIOverview.as_view(), name='api-overview'),
-    path('games', game_views.GameList.as_view(), name='games-list'),
+    path('games', game_views.GameList.as_view(), name='game-list'),
     path('games/<str:pk>', game_views.GameDetail.as_view(), name='game-detail'),
 ]
