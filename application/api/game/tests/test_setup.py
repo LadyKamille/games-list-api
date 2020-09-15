@@ -15,8 +15,8 @@ class TestSetup(APITestCase):
             'description': 'Turn-based strategy game.',
         }
 
-        Game.objects.create(title=self.game_data['title'],
-                            description=self.game_data['description'])
+        self.game = Game.objects.create(title=self.game_data['title'],
+                                        description=self.game_data['description'])
 
         return super().setUp()
 
