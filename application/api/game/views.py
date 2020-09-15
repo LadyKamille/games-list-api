@@ -46,7 +46,8 @@ class GameDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
-    def get_object(self, pk):
+    @staticmethod
+    def get_object(pk):
         try:
             return Game.objects.get(pk=pk)
         except Game.DoesNotExist:
