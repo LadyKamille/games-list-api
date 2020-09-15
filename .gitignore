@@ -11,3 +11,6 @@ db.sqlite3
 # PyCharm #
 .DS_Store
 .idea
+
+# Environment #
+.env
