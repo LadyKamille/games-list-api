@@ -10,6 +10,7 @@ django = "*"
 python-dotenv = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.8"

@@ -14,3 +14,8 @@ db.sqlite3
 
 # Environment #
 .env
+venv/*
+
+# Coverage #
+.coverage
+coverage/*
