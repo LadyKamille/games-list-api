@@ -22,6 +22,14 @@ Shows the current test coverage of the application.
 
 ```coverage run manage.py test```
 
+Shows the coverage in the terminal.
+
+```coverage report```
+
+To see a detailed report in the browser that shows the missing lines, use the following command and open `htmlcov/index.html`.
+
+```coverage html```
+
 Runs all of the unit tests.
 
 ```python manage.py test```

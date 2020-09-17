@@ -18,4 +18,4 @@ venv/*
 
 # Coverage #
 .coverage
-coverage/*
+htmlcov/*
