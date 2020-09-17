@@ -6,6 +6,7 @@ class GameTestViews(TestSetup):
     def test_get_game_list(self):
         response = self.client.get(self.game_list_url)
         self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.data), 1)
 
     def test_cannot_create_game_without_data(self):
         response = self.client.post(self.game_list_url)
@@ -36,3 +37,4 @@ class GameTestViews(TestSetup):
     def test_deletes_game_with_valid_id(self):
         response = self.client.delete(self.game_detail_url)
         self.assertEqual(response.status_code, 204)
+

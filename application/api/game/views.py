@@ -53,19 +53,19 @@ class GameDetail(APIView):
             raise Http404
 
     def get(self, request, pk):
-        snippet = self.get_object(pk)
-        serializer = GameSerializer(snippet)
+        game = self.get_object(pk)
+        serializer = GameSerializer(game)
         return Response(serializer.data)
 
     def put(self, request, pk):
-        snippet = self.get_object(pk)
-        serializer = GameSerializer(snippet, data=request.data)
+        game = self.get_object(pk)
+        serializer = GameSerializer(game, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, pk):
-        snippet = self.get_object(pk)
-        snippet.delete()
+        game = self.get_object(pk)
+        game.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
